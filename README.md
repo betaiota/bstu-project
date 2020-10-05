@@ -1,2 +1,2 @@
 # bstu-project
-Student projects
+BSTU/Programming technology/Labwork 1
