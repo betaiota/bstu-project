@@ -111,7 +111,7 @@
 				
 				$response = curl_exec($ch);
 				
-				curl_close($sh);
+				curl_close($сh);
 				$responseArray = json_decode($response, true);
 				
 				if(isset($responseArray['error_type']) ){
