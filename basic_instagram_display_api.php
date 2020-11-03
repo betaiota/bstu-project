@@ -63,13 +63,13 @@
 			);
 			
 			$response = $this->_makeApiCall($params);
-			return response;
+			return $response;
 		}
 		
 		private function _makeApiCall($params){
 			$ch = curl_init();
 			
-			$endpoint = $params[endpoint_url];
+			$endpoint = $params['endpoint_url'];
 			if ('POST' == $params['type']){
 				curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params['url_params']));
 				curl_setopt($ch, CURLOPT_POST, 1);
