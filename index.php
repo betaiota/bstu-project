@@ -20,11 +20,6 @@
 	<h3>Количество медиа-объектов: <?php echo $user['media_count']; ?></h3>
 	<h4>Тип аккаунта: <?php echo $user['account_type']; ?></h4>
 	<hr />
-	<?php $usersMedia = $ig->getUsersMedia(); ?>
-	<h3>Users Media Page 1 (<?php echo count( $usersMedia['data'] ); ?>)</h3>
-	<h4>Raw Data</h4>
-	<textarea style="width:100%;height:400px;"><?php print_r( $usersMedia ); ?></textarea>
-	<h4>Posts</h4>
 <?php else : ?>
 	<a href="<?php echo $ig->authorizationUrl; ?>">
 		Авторизация

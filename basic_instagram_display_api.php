@@ -112,7 +112,7 @@
 		
 		public function getUsersMedia() {
 			$params = array(
-			'endpoint_url' => $this->_graphBaseUrl . 'me/media',
+			'endpoint_url' => $this->_graphBaseUrl . $this->userId . '/media',
 			'type' => 'GET',
 			'url_params' => array(
 					'fields' => 'id,caption,media_type,media_url',
