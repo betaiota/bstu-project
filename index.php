@@ -15,7 +15,7 @@
 	<h4>Информация об аккаунте</h4>
 	<?php echo $ig->getUserAccessToken(); ?>
 	<h4>Время жизни токена</h4>
-	<?php echo ceil($ig->getUserAccessTokenExpires() / 3600); ?> дней
+	<?php echo ceil($ig->getUserAccessTokenExpires() / 86400); ?> дней
 <?php else : ?>
 	<a href="<?php echo $ig->authorizationUrl; ?>">
 		Авторизация
