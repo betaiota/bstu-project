@@ -48,6 +48,10 @@
 		}
 		
 		private function _setUserInstagramAccessToken($params) {
+			if($params['access_token']) {
+				$this->_userAccessToken = $params['access_token'];
+				$this->hasUserAccessToken = true;
+			}
 			if($params['get_code']){
 				$_userAccessTokenResponse = $this->_getUserAccessToken();
 				$this->_userAccessToken = $_userAccessTokenResponse['access_token'];
@@ -83,6 +87,19 @@
 			'url_params' => array(
 					'client_secret' => $this->_appSecret,
 					'grant_type' => 'ig_exchange_token',
+				)
+			);
+			
+			$response = $this->_makeApiCall($params);
+			return $response;
+		}
+		
+		public function getUser() {
+			$params = array(
+			'endpoint_url' => $this->_graphBaseUrl . 'me',
+			'type' => 'GET',
+			'url_params' => array(
+					'fields' => 'id,username,media_count,account_type',
 				)
 			);
 			
