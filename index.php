@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<h1>Instagram app coming soon!...</h1>
-	</head>
-	<body>
-	</body>
-</html>
+<?php	
+	require once('basic_instagram_display_api.php');
+	$params = array(
+		'get_code' => isset($_GET['code'] ) ? $_GET['code'] : '' );
+	
+	
+	$ig = new instagram_basic_display_api($params);
+?>
+<h1>Технологии программирования, ПР 1</h1>
+<h3>студент Бабак И., группа И973</h3>
+<a href="<?php $ig->; ?>">
+	Авторизация
+</a>
