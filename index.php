@@ -9,6 +9,13 @@
 ?>
 <h1>Технологии программирования, ПР 1</h1>
 <h3>студент Бабак И., группа И973</h3>
-<a href="<?php echo $ig->authorizationUrl; ?>">
-	Авторизация
-</a>
+<hr />
+
+<?php if($ig->hasUserAccessToken) : ?>
+	<h4>Информация об аккаунте</h4>
+	<?php echo $ig->getUserAccessToken(); ?>
+<?php else : ?>
+	<a href="<?php echo $ig->authorizationUrl; ?>">
+		Авторизация
+	</a>
+<?php endif; ?>
