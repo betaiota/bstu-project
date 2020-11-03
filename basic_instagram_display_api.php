@@ -21,7 +21,7 @@
 		
 		private function _setAuthorizationUrl() {
 			$getVars = array(
-				'app_id' => $this->$_app_id,
+				'app_id' => $this->$_appid,
 				'redirect_uri' => $this->$_redirectUrl,
 				'scope' => 'user_profile,user_media',
 				'response_type' => 'code');
