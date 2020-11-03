@@ -14,6 +14,7 @@
 <hr />
 
 <?php if($ig->hasUserAccessToken) : ?>
+<?php $user = $ig->getUser(); ?>
 	<h4>Информация об аккаунте</h4>
 	<h1>Имя пользователя: <?php echo $user['username']; ?></h1>
 	<h2>IG ID: <?php echo $user['id']; ?></h2>
