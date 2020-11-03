@@ -82,7 +82,7 @@
 			'type' => 'GET',
 			'url_params' => array(
 					'client_secret' => $this->_appSecret,
-					'grant_type' => 'ig_excange_token',
+					'grant_type' => 'ig_excage_token',
 				)
 			);
 			
@@ -99,7 +99,6 @@
 				curl_setopt($ch, CURLOPT_POST, 1);
 			}elseif ('GET' == $params['type'] ) {
 				$params['url_params']['access_token'] = $this->_userAccessToken;
-				
 				$endpoint .= '?' . http_build_query($params['url_params']);				
 			}
 				
@@ -112,6 +111,7 @@
 				$response = curl_exec($ch);
 				
 				curl_close($сh);
+				
 				$responseArray = json_decode($response, true);
 				
 				if(isset($responseArray['error_type']) ){
