@@ -26,7 +26,7 @@
 		}
 		
 		public function getUserAccessToken(){
-			return this->_userAccessToken;
+			return $this->_userAccessToken;
 		}
 		
 		private function _setAuthorizationUrl() {
