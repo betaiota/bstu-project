@@ -1,5 +1,5 @@
 <?php
-	require once('defines.php');
+	require_once('defines.php');
 	
 	Class instagram_basic_display_api {
 		private $_appid = INSTAGRAM_APP_ID;
