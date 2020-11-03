@@ -58,7 +58,7 @@
 				$_userAccessTokenResponse = $this->_getUserAccessToken();
 				$this->_userAccessToken = $_userAccessTokenResponse['access_token'];
 				$this->hasUserAccessToken = true;
-				$this->userId = $userAccessTokenResponse['user_id'];
+				$this->userId = $_userAccessTokenResponse['user_id'];
 				
 				$longLivedAccesstokenResponse = $this->_getLongLivedUserAccessToken();
 				$this->_userAccessToken = $longLivedAccesstokenResponse['access_token'];
