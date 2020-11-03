@@ -13,6 +13,7 @@
 		
 		public $authorizationUrl = '';
 		public $hasUserAccessToken = false;
+		public $userId = '';
 		
 		
 		function __construct($params) {
@@ -51,11 +52,13 @@
 			if($params['access_token']) {
 				$this->_userAccessToken = $params['access_token'];
 				$this->hasUserAccessToken = true;
+				$this->userId = $params['user_id'];
 			}
-			if($params['get_code']){
+			elseif($params['get_code']){
 				$_userAccessTokenResponse = $this->_getUserAccessToken();
 				$this->_userAccessToken = $_userAccessTokenResponse['access_token'];
 				$this->hasUserAccessToken = true;
+				$this->userId = $userAccessTokenResponse['user_id'];
 				
 				$longLivedAccesstokenResponse = $this->_getLongLivedUserAccessToken();
 				$this->_userAccessToken = $longLivedAccesstokenResponse['access_token'];
@@ -100,6 +103,19 @@
 			'type' => 'GET',
 			'url_params' => array(
 					'fields' => 'id,username,media_count,account_type',
+				)
+			);
+			
+			$response = $this->_makeApiCall($params);
+			return $response;
+		}
+		
+		public function getUsersMedia() {
+			$params = array(
+			'endpoint_url' => $this->_graphBaseUrl . $this->userId . '/media',
+			'type' => 'GET',
+			'url_params' => array(
+					'fields' => 'id,caption,media_type,media_url',
 				)
 			);
 			

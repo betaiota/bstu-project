@@ -15,15 +15,16 @@
 
 <?php if($ig->hasUserAccessToken) : ?>
 	<h4>Информация об аккаунте</h4>
-	<?php $user = $ig->getUser(); ?>
-	<pre>
-		<?php print_r($user); ?>
-	</pre>
-	<h1>Username: <?php echo $user['username']; ?></h1>
+	<h1>Имя пользователя: <?php echo $user['username']; ?></h1>
 	<h2>IG ID: <?php echo $user['id']; ?></h2>
 	<h3>Количество медиа-объектов: <?php echo $user['media_count']; ?></h3>
 	<h4>Тип аккаунта: <?php echo $user['account_type']; ?></h4>
 	<hr />
+	<?php $usersMedia = $ig->getUsersMedia(); ?>
+	<h3>Users Media Page 1 (<?php echo count( $usersMedia['data'] ); ?>)</h3>
+	<h4>Raw Data</h4>
+	<textarea style="width:100%;height:400px;"><?php print_r( $usersMedia ); ?></textarea>
+	<h4>Posts</h4>
 <?php else : ?>
 	<a href="<?php echo $ig->authorizationUrl; ?>">
 		Авторизация
