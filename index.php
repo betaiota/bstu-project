@@ -1,5 +1,5 @@
 <?php	
-	require once('basic_instagram_display_api.php');
+	require_once('basic_instagram_display_api.php');
 	$params = array(
 		'get_code' => isset($_GET['code'] ) ? $_GET['code'] : '' );
 	
