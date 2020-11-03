@@ -16,9 +16,8 @@
 <?php if($ig->hasUserAccessToken) : ?>
 	<h4>Информация об аккаунте</h4>
 	<?php $user = $ig->getUser(); ?>
-	<h4>Время жизни токена</h4>
 	<pre>
-		<php print_r($user); ?>
+		<?php print_r($user); ?>
 	</pre>
 	<h1>Username: <?php echo $user['username']; ?></h1>
 	<h2>IG ID: <?php echo $user['id']; ?></h2>
