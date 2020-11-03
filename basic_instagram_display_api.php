@@ -82,7 +82,7 @@
 			'type' => 'GET',
 			'url_params' => array(
 					'client_secret' => $this->_appSecret,
-					'grant_type' => 'ig_excage_token',
+					'grant_type' => 'ig_exchange_token',
 				)
 			);
 			
@@ -94,6 +94,7 @@
 			$ch = curl_init();
 			
 			$endpoint = $params['endpoint_url'];
+			
 			if ('POST' == $params['type']){
 				curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params['url_params']));
 				curl_setopt($ch, CURLOPT_POST, 1);
