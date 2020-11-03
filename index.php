@@ -5,7 +5,7 @@
 	$accessToken = 'IGQVJXUjMzSEpaMTZAvajRaQmc0ZAGRsYlpxbDU4Q1VwREpqUkxHcXVNRk4tWnlRYXZAoM09VUU4taVdHZAnlRTUhJd25OSElOV3BwMzZAMYVltVE8xbnNFREtzT25FeTBHcTBQczJpVHVR';
 	$params = array(
 		'get_code' => isset($_GET['code']) ? $_GET['code'] : '',
-		'access_token' => $accessToken
+		'access_token' => $accessToken,
 		'user_id' => '17841402004326569'
 	);
 	$ig = new instagram_basic_display_api($params);
