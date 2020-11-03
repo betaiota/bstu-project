@@ -11,7 +11,7 @@
 		public $authorizationUrl = '';
 		
 		function __construct($params) {
-			$this->_getCode = $param['get_code'];
+			$this->_getCode = $params['get_code'];
 			
 			//getting an access token here
 			
