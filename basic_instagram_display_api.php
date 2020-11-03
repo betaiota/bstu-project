@@ -7,7 +7,7 @@
 		private $_redirectUrl = INSTAGRAM_APP_REDIRECT_URI;
 		private $_getCode = '';
 		private $_apiBaseUrl = 'https://api.instagram.com/';
-		private $_graphBaseUrl = 'https://graph.instagram.com/'
+		private $_graphBaseUrl = 'https://graph.instagram.com/';
 		private $_userAccessToken = '';
 		private $_userAccessTokenExpires = '';
 		
