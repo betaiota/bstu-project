@@ -1,7 +1,8 @@
 <?php	
+	require_once 'vendor/autoload.php';
 	require_once('basic_instagram_display_api.php');
 	$params = array(
-		'get_code' => isset($_GET['code'] ) ? $_GET['code'] : '' );
+		'get_code' => isset($_GET['code']) ? $_GET['code'] : '' );
 	
 	
 	$ig = new instagram_basic_display_api($params);
