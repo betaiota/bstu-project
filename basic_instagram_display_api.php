@@ -21,13 +21,13 @@
 		
 		private function _setAuthorizationUrl() {
 			$getVars = array(
-				'client_id' => $this->$_appid,
-				'redirect_uri' => $this->$_redirectUrl,
+				'client_id' => $this->_appid,
+				'redirect_uri' => $this->_redirectUrl,
 				'scope' => 'user_profile,user_media',
 				'response_type' => 'code');
 			
 			// create url
-			$this->authorizationUrl = $this->_apiBaseUrl . 'oauth/authorize?' . http_build_query( $getVars );
+			$this->authorizationUrl = $this->_apiBaseUrl . 'oauth/authorize?' . http_build_query($getVars);
 			
 		}
 	}
