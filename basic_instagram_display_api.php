@@ -76,7 +76,7 @@
 			return $response;
 		}
 		
-		private function _getLongLivedUserAccessToken($params) {
+		private function _getLongLivedUserAccessToken() {
 			$params = array(
 			'endpoint_url' => $this->_graphBaseUrl . 'access_token',
 			'type' => 'GET',
